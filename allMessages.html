@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>All Chat Messages</title>
+    <style>
+      #chat-container {
+        font-family: Arial, sans-serif;
+        max-height: 90vh;
+        overflow-y: auto;
+        font-size: 30px; /* Set default font size for the chat container */
+      }
+      .chat-message {
+        display: flex;
+        flex-direction: column; /* stack items vertically */
+        align-items: flex-start;
+        margin-bottom: 2px;
+        padding: 2px;
+      }
+      .chat-header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 3px; /* Space between header and message */
+      }
+      .chat-message .chat-icon {
+        width: 20px;
+        height: 20px;
+        margin-right: 10px;
+      }
+      .chat-username {
+        font-weight: bold;
+        margin-right: 3px; /* Add some space between username and icon */
+        font-size: 30px; /* Set font size for chat username */
+      }
+      .chat-message .chat-message-text {
+        color: black;
+        font-size: 26px; /* Set font size for chat message text */
+        padding-left: 30px;
+      }
+      .kick {
+        color: green;
+      }
+      .twitch {
+        color: purple;
+      }
+      .youtube {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>All Chat Messages</h1>
+    <div id="chat-container"></div>
+    <script src="allMessages.js"></script>
+  </body>
+</html>

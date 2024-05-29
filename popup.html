@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Combined Chat Viewer</title>
+    <style>
+      #chat-container {
+        font-family: Arial, sans-serif;
+        max-height: 400px;
+        overflow-y: auto;
+      }
+      .chat-message {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+        padding: 10px;
+        border-bottom: 1px solid #ebebeb;
+      }
+      .chat-message img {
+        width: 20px;
+        height: 20px;
+        margin-right: 10px;
+      }
+      .kick {
+        color: green;
+      }
+      .twitch {
+        color: purple;
+      }
+      .youtube {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Combined Chat Viewer</h1>
+    <div id="chat-container"></div>
+    <button id="all-messages-btn">View All Messages</button>
+    <script src="popup.js"></script>
+  </body>
+</html>

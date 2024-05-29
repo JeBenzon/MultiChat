@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "Combined Chat Viewer",
+  "description": "Combines chats from Kick, Twitch, and YouTube into a single view.",
+  "version": "1.1",
+  "permissions": ["tabs", "scripting", "activeTab", "webNavigation"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "host_permissions": ["*://*.kick.com/*", "*://*.twitch.tv/*", "*://*.youtube.com/*"],
+  "content_scripts": [
+    {
+      "matches": ["*://*.kick.com/*", "*://*.twitch.tv/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["allMessages.html", "allMessages.js", "icons/*.png", "sounds/*.mp3"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
