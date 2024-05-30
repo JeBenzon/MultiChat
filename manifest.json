@@ -1,13 +1,13 @@
 {
   "manifest_version": 3,
-  "name": "Combined Chat Viewer",
-  "description": "Combines chats from Kick, Twitch, and YouTube into a single view.",
-  "version": "1.1",
+  "name": "MultiStreamChatsBETA",
+  "description": "THIS EXTENSION IS FOR BETA TESTING",
+  "version": "1.0",
   "permissions": ["tabs", "scripting", "activeTab", "webNavigation"],
   "background": {
     "service_worker": "background.js"
   },
-  "host_permissions": ["*://*.kick.com/*", "*://*.twitch.tv/*", "*://*.youtube.com/*"],
+  "host_permissions": ["*://*.kick.com/*", "*://*.twitch.tv/*"],
   "content_scripts": [
     {
       "matches": ["*://*.kick.com/*", "*://*.twitch.tv/*"],
@@ -22,5 +22,10 @@
       "resources": ["allMessages.html", "allMessages.js", "icons/*.png", "sounds/*.mp3"],
       "matches": ["<all_urls>"]
     }
-  ]
+  ],
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
 }
